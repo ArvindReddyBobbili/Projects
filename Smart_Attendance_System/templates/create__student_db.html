@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %} Register Student {% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div>
+            <h2 class="mt-5 fontforall">Add Student to DB</h2>
+            <form method="post" action="{{ url_for('add_student_details') }}">
+                    <div class="row">
+                        <div class="col mt-3 pb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Enter your Name">
+                        </div>
+                        <div class="col mt-3">
+                            <input type="text" name="roll_no" class="form-control" placeholder="Enter your roll Number">
+                        </div>
+                        <div class="col">
+                            <button type="submit" value="Next" name="click"
+                                class="btn btn-outline-primary mt-3">Next</button>
+                        </div>
+                    </div>
+        </div>
+        </form>
+        <!--                              REMOVE THIS LATER  
+            <input type="text" name="name" placeholder="Enter name here" />
+                <input class="form-control" type="text" name="roll_no" placeholder="Enter Roll Number" />
+                <input class="form-control" type="text" placeholder="Default input"> -->
+        <!-- <button type="submit" value="Next" name="click" class="btn btn-outline-primary mt-3">Next</button> -->
+
+
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <script>
+            var messages = {{ messages | safe }};
+            for (var i = 0; i < messages.length; i++) {
+                alert(messages[i]);
+            }
+        </script>
+        {% endif %}
+        {% endwith %}
+        <h2 class="fontforall">Instructions:</h2>
+        <ul>
+            <li class="fontforall">Center your face while looking at camera</li>
+            <li class="fontforall"> Make sure you are siting in a bright lit place</li>
+            <li class="fontforall">Wait for the camera to register your face</li>
+        </ul>
+
+    </div>
+    <div class="container-fluid">
+        <div class="image-container-2">
+            <img src="{{ url_for('video_feed_for_dbcreation') }}">
+        </div>
+    </div>
+    
+</div>
+</div>
+</div>
+{% endblock %}

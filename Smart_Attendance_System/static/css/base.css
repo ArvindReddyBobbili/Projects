@@ -1,0 +1,44 @@
+.img {
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+.fontforall {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.Img_size {
+  height: 700px;
+  width: 600px;
+  padding-left: 30px;
+  border-radius: 50px;
+
+}
+
+
+/* .navbar-brand {
+  padding: 550px;
+} */
+
+.logo {
+  font-family: 'Graduate', cursive;
+}
+
+.image-container {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:50px;
+  padding-left:55px
+}
+
+.image-container-2 {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
