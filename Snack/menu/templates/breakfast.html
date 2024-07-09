@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block title %} Breakfast {% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="row">
+        <div class="row  row-cols-lg-4 row-cols-sm-2 g-7">
+            {% for f in food_breakfast %}
+            <div class="card">
+                <div class="product">
+                    <br>
+                    <h4 class="foodnames"><strong>{{f.fname}}</strong></h4>
+                    <img class="ie" src="{{f.fimage.url}}" class="card-img-top" alt="...">
+                    <hr>
+                    <a href={% url 'add_to_cart_breakfast' f.food_id %}><button
+                            class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button></a>
+                    <h4 class="foodprices" style="float: right"><strong>&#8377;{{f.price}}</strong></h4>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
